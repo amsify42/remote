@@ -315,4 +315,16 @@ class Connection implements ConnectionInterface
     {
         return $this->gateway->status();
     }
+
+    /**
+     * Create directory to the given path on the server.
+     *
+     * @param  string $directory
+     *
+     * @return void
+     */
+    public function mkdir($directory) 
+    {
+        $this->getGateway()->mkdir($directory);
+    }
 }

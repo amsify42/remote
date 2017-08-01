@@ -404,4 +404,16 @@ class SecLibGateway implements GatewayInterface
     {
         return $this->port;
     }
+
+    /**
+     * Create directory to the given path
+     *
+     * @param  string $directory
+     *
+     * @return void
+     */ 
+    public function mkdir($directory) 
+    {
+        $this->getConnection()->mkdir($directory);
+    }
 }
